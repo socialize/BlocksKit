@@ -375,6 +375,7 @@
 		A97E4CA213FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MFMessageComposeViewController+BlocksKit.m"; sourceTree = "<group>"; };
 		A99DD88413D316FF00F2308F /* NSURLConnection+BlocksKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLConnection+BlocksKit.h"; sourceTree = "<group>"; };
 		A99DD88513D3170100F2308F /* NSURLConnection+BlocksKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLConnection+BlocksKit.m"; sourceTree = "<group>"; };
+		AA61D7D115902F35008AC460 /* hide_symbols_blockskit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = hide_symbols_blockskit.h; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,6 +562,7 @@
 		6C3DBF931382F1BA00E6C9AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				AA61D7D115902F35008AC460 /* hide_symbols_blockskit.h */,
 				6C3DBF941382F1BA00E6C9AA /* BlocksKit-Prefix.pch */,
 				6CC08FC71385553300DDEABB /* README.md */,
 			);

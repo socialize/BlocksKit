@@ -1,0 +1,14 @@
+#define BKDelegate  SZBKDelegate
+#define BlocksKit  SZBlocksKit
+#define BKMailComposeViewControllerDelegate  SZBKMailComposeViewControllerDelegate
+#define BKMessageComposeViewControllerDelegate  SZBKMessageComposeViewControllerDelegate
+#define BKCacheDelegate  SZBKCacheDelegate
+#define BKInvocationGrabber SZBKInvocationGrabber
+#define AssociatedObjects SZAssociatedObjects
+#define BlockObservation SZBlockObservation
+#define BKObserver SZBKObserver
+#define BlocksKitPrivate SZBlocksKitPrivate
+#define BKURLConnectionDelegate  SZBKURLConnectionDelegate
+#define BKControlWrapper SZBKControlWrapper
+#define BlocksKitInternal SZBlocksKitInternal
+#define BKWebViewDelegate  SZBKWebViewDelegate
