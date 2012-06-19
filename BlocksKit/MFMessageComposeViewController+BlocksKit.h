@@ -3,8 +3,6 @@
 //  %PROJECT
 //
 
-#import "BKGlobals.h"
-
 typedef void (^BKMessageComposeBlock) (MessageComposeResult result);
 
 /** MFMessageComposeViewController with block callback in addition to delegation.
@@ -31,6 +29,6 @@ typedef void (^BKMessageComposeBlock) (MessageComposeResult result);
  messageComposeViewController:didFinishWithResult method
  of MFMessageComposeViewControllerDelegate.
  */
-@property (copy) BKMessageComposeBlock completionBlock;
+@property (copy) BKMessageComposeBlock sz_completionBlock;
 
 @end

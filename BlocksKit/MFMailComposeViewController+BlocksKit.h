@@ -3,8 +3,6 @@
 //  %PROJECT
 //
 
-#import "BKGlobals.h"
-
 typedef void (^BKMailComposeBlock) (MFMailComposeResult result, NSError *error);
 
 /** MFMailComposeViewController with block callbacks.
@@ -31,6 +29,6 @@ typedef void (^BKMailComposeBlock) (MFMailComposeResult result, NSError *error);
  mailComposeController:didFinishWithResult:error: method
  of MFMailComposeViewControllerDelegate.
 */
-@property (copy) BKMailComposeBlock completionBlock;
+@property (copy) BKMailComposeBlock sz_completionBlock;
 
 @end
