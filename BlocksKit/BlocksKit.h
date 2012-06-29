@@ -25,6 +25,8 @@
 //
 
 #import <Foundation/Foundation.h>
+
+#import "hide_symbols_blockskit.h"
 #import <dispatch/dispatch.h>
 
 #import "BKGlobals.h"

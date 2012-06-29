@@ -260,6 +260,7 @@
 		A99DD88913D3170200F2308F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DD88513D3170100F2308F /* NSURLConnection+BlocksKit.m */; };
 		A99DD88A13D3170200F2308F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DD88513D3170100F2308F /* NSURLConnection+BlocksKit.m */; };
 		A99DD88B13D3170200F2308F /* NSURLConnection+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A99DD88513D3170100F2308F /* NSURLConnection+BlocksKit.m */; };
+		AA2D434C159D56D000622210 /* hide_symbols_blockskit.h in Headers */ = {isa = PBXBuildFile; fileRef = AA61D7D115902F35008AC460 /* hide_symbols_blockskit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -651,6 +652,7 @@
 				A97E4C9F13FD5B14001BB376 /* MFMailComposeViewController+BlocksKit.h in Headers */,
 				A97E4CA313FD638A001BB376 /* MFMessageComposeViewController+BlocksKit.h in Headers */,
 				6C5FA859144D08B700997A2F /* BKDelegate.h in Headers */,
+				AA2D434C159D56D000622210 /* hide_symbols_blockskit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
