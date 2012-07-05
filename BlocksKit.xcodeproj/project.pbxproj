@@ -1254,6 +1254,10 @@
 		6C3DBF981382F1BA00E6C9AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
@@ -1269,6 +1273,10 @@
 		6C3DBF991382F1BA00E6C9AA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BlocksKit/BlocksKit-Prefix.pch";
