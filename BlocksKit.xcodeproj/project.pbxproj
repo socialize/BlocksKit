@@ -179,7 +179,6 @@
 		6CC40A491447B67A00E47595 /* UIBarButtonItem+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AAD97138372C400203261 /* UIBarButtonItem+BlocksKit.m */; };
 		6CC40A4A1447B67A00E47595 /* UIControl+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AAD93138372B400203261 /* UIControl+BlocksKit.m */; };
 		6CC40A4B1447B67A00E47595 /* UIView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6AAD9F138372E300203261 /* UIView+BlocksKit.m */; };
-		6CC40A4C1447B67A00E47595 /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */; };
 		6CC40A501447B73B00E47595 /* BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C3DBFB21383044600E6C9AA /* BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CC40A511447B73B00E47595 /* BKGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C145416138497D40067A56E /* BKGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CC40A521447B73B00E47595 /* BKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C3DBFB41383050F00E6C9AA /* BKMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -244,8 +243,6 @@
 		6CC40AAA1447BC5800E47595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC40AA71447BBCF00E47595 /* Foundation.framework */; };
 		6CC56DF91386A48900925FDC /* UIWebView+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC56DF71386A48900925FDC /* UIWebView+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CC56DFA1386A48900925FDC /* UIWebView+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC56DF71386A48900925FDC /* UIWebView+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6CC56DFB1386A48900925FDC /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */; };
-		6CC56DFC1386A48900925FDC /* UIWebView+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC56DF81386A48900925FDC /* UIWebView+BlocksKit.m */; };
 		A92C9A6313F41E0A006DA96A /* NSCache+BlocksKit.h in Headers */ = {isa = PBXBuildFile; fileRef = A92C9A6113F41E0A006DA96A /* NSCache+BlocksKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A92C9A6413F41E0A006DA96A /* NSCache+BlocksKit.m in Sources */ = {isa = PBXBuildFile; fileRef = A92C9A6213F41E0A006DA96A /* NSCache+BlocksKit.m */; };
 		A97E4C9A13FD5AAB001BB376 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A97E4C9813FD5AAB001BB376 /* MessageUI.framework */; };
@@ -1014,7 +1011,6 @@
 				6C6AAD9D138372D200203261 /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				6C6AADA1138372E400203261 /* UIView+BlocksKit.m in Sources */,
 				6CC0902113855E8700DDEABB /* NSIndexSet+BlocksKit.m in Sources */,
-				6CC56DFB1386A48900925FDC /* UIWebView+BlocksKit.m in Sources */,
 				6C2427F613C5653E0016A271 /* NSMutableArray+BlocksKit.m in Sources */,
 				6C2427FF13C565550016A271 /* NSMutableSet+BlocksKit.m in Sources */,
 				6C24280713C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */,
@@ -1070,7 +1066,6 @@
 				6CC0901513855CEE00DDEABB /* UIBarButtonItem+BlocksKit.m in Sources */,
 				6CC0901613855CEE00DDEABB /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				6CC0901713855CEE00DDEABB /* UIView+BlocksKit.m in Sources */,
-				6CC56DFC1386A48900925FDC /* UIWebView+BlocksKit.m in Sources */,
 				6C2427F813C5653E0016A271 /* NSMutableArray+BlocksKit.m in Sources */,
 				6C24280113C565550016A271 /* NSMutableSet+BlocksKit.m in Sources */,
 				6C24280913C565660016A271 /* NSMutableDictionary+BlocksKit.m in Sources */,
@@ -1106,7 +1101,6 @@
 				6CC40A491447B67A00E47595 /* UIBarButtonItem+BlocksKit.m in Sources */,
 				6CC40A4A1447B67A00E47595 /* UIControl+BlocksKit.m in Sources */,
 				6CC40A4B1447B67A00E47595 /* UIView+BlocksKit.m in Sources */,
-				6CC40A4C1447B67A00E47595 /* UIWebView+BlocksKit.m in Sources */,
 				6CC40A351447B67000E47595 /* UIGestureRecognizer+BlocksKit.m in Sources */,
 				6C5FA85C144D08B700997A2F /* BKDelegate.m in Sources */,
 			);
