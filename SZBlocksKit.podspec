@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   #s.source   = { :git => 'https://github.com/zwaldowski/BlocksKit.git', :tag => 'v0.9.5' }
   #s.source   = { :path => '.'}
 
-  s.source_files = 'BlocksKit/*.{h,m}' , 'hide_symbols_blockskit.h'
+  s.source_files = 'BlocksKit' , 'hide_symbols_blockskit.h'
   s.prefix_header_file = 'BlocksKit/BlocksKit-Prefix.pch'
   s.header_dir   =  'BlocksKit'
 
