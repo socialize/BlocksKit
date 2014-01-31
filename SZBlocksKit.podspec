@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'The Objective-C block utilities you always wish you had.'
   s.homepage = 'https://github.com/zwaldowski/BlocksKit'
   s.author   = { 'Zachary Waldowski' => 'zwaldowski@gmail.com'}
-  #s.source   = { :git => 'https://github.com/zwaldowski/BlocksKit.git', :tag => 'v0.9.5' }
+  s.source   = { :git => 'https://github.com/socialize/BlocksKit.git', :tag => 'v0.9.5' }
   #s.source   = { :path => '.'}
 
   s.source_files = 'BlocksKit' , 'hide_symbols_blockskit.h'
