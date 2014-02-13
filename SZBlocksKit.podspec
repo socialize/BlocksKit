@@ -9,15 +9,14 @@ Pod::Spec.new do |s|
   s.source                = { :git => 'https://github.com/socialize/BlocksKit.git', :tag => "v#{s.version}" }
   s.xcconfig              = {'CLANG_WARN_DIRECT_OBJC_ISA_USAGE' => 'NO'}
   s.requires_arc          = true
-  s.osx.deployment_target = '10.7'
   s.ios.deployment_target = '5.0'
 
   s.default_subspec = 'All'
   s.subspec 'All' do |ss|
-  	ss.dependency 'BlocksKit/Core'
-  	ss.dependency 'BlocksKit/DynamicDelegate'
-  	ss.ios.dependency 'BlocksKit/MessageUI'
-  	ss.ios.dependency 'BlocksKit/UIKit'
+    ss.ios.dependency 'SZBlocksKit/Core'
+    ss.ios.dependency 'SZBlocksKit/DynamicDelegate'
+    ss.ios.dependency 'SZBlocksKit/MessageUI'
+    ss.ios.dependency 'SZBlocksKit/UIKit'
   end
 
   s.subspec 'Core' do |ss|
@@ -31,20 +30,20 @@ Pod::Spec.new do |s|
 
   s.subspec 'DynamicDelegate' do |ss|
     ss.source_files = 'BlocksKit/BlocksKit.h', 'BlocksKit/Dynamic Delegate/*.{h,m}', 'BlocksKit/Dynamic Delegate/Foundation/*.{h,m}'
-    ss.ios.dependency 'BlocksKit/MiniFFI'
+    ss.ios.dependency 'SZBlocksKit/MiniFFI'
     ss.osx.library = 'ffi'
   end
 
   s.subspec 'MessageUI' do |ss|
-  	ss.dependency 'BlocksKit/DynamicDelegate'
-  	ss.platform = :ios
-  	ss.source_files = 'BlocksKit/BlocksKit+MessageUI.h', 'BlocksKit/MessageUI/*.{h,m}'
-  	ss.ios.frameworks = 'MessageUI'
+    ss.dependency 'SZBlocksKit/DynamicDelegate'
+    ss.platform = :ios
+    ss.source_files = 'BlocksKit/BlocksKit+MessageUI.h', 'BlocksKit/MessageUI/*.{h,m}'
+    ss.ios.frameworks = 'MessageUI'
   end
 
   s.subspec 'UIKit' do |ss|
-  	ss.dependency 'BlocksKit/DynamicDelegate'
-  	ss.platform = :ios
-  	ss.source_files = 'BlocksKit/BlocksKit+UIKit.h', 'BlocksKit/UIKit/*.{h,m}'
+    ss.dependency 'SZBlocksKit/DynamicDelegate'
+    ss.platform = :ios
+    ss.source_files = 'BlocksKit/BlocksKit+UIKit.h', 'BlocksKit/UIKit/*.{h,m}'
   end
 end
