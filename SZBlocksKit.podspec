@@ -1,12 +1,13 @@
 Pod::Spec.new do |s|
-  s.name                  = 'BlocksKit'
+  s.name                  = 'SZBlocksKit'
   s.version               = '2.1.0'
   s.license               = 'MIT'
   s.summary               = 'The Objective-C block utilities you always wish you had.'
-  s.homepage              = 'https://github.com/pandamonia/BlocksKit'
+  s.homepage              = 'https://github.com/socialize/BlocksKit'
   s.author                = { 'Zachary Waldowski' => 'zwaldowski@gmail.com',
                               'Alexsander Akers'  => 'a2@pandamonia.us' }
   s.source                = { :git => 'https://github.com/socialize/BlocksKit.git', :tag => "v#{s.version}" }
+  s.xcconfig              = {'CLANG_WARN_DIRECT_OBJC_ISA_USAGE' => 'NO'}
   s.requires_arc          = true
   s.osx.deployment_target = '10.7'
   s.ios.deployment_target = '5.0'
@@ -25,7 +26,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'MiniFFI' do |ss|
     ss.source_files = 'ffi-mini/include/*.h', 'ffi-mini/src/*.c', 'ffi-mini/src/aarch64/*.{c,S}', 'ffi-mini/src/arm/*.{c,S}', 'ffi-mini/src/x86/*.{c,S}'
-    ss.xcconfig     = { 'OTHER_LDFLAGS' => "-Wl,-no_compact_unwind" }
+    ss.xcconfig     = { 'WARNING_LDFLAGS' => "-Wl,-no_compact_unwind" }
   end
 
   s.subspec 'DynamicDelegate' do |ss|
