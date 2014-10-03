@@ -11,8 +11,6 @@
 
 @interface A2DynamicUIActionSheetDelegate : A2DynamicDelegate <UIActionSheetDelegate>
 
-@property (nonatomic, assign) BOOL didHandleButtonClick;
-
 @end
 
 @implementation A2DynamicUIActionSheetDelegate
@@ -24,18 +22,7 @@
 		[realDelegate actionSheet:actionSheet clickedButtonAtIndex:buttonIndex];
 	
 	void (^block)(void) = self.handlers[@(buttonIndex)];
-
-  // Note: On iPad with iOS 8 GM seed, `actionSheet:clickedButtonAtIndex:` always gets called twice if you tap any button other than Cancel;
-  // In other words, assume you have two buttons: OK and Cancel; if you tap OK, this method will be called once for the OK button and once
-  // for the Cancel button. This could result in some really obscure bugs, so adding `didHandleButtonClick` property maintains iOS 7 compatibility.
-  if (block && self.didHandleButtonClick == NO) {
-    self.didHandleButtonClick = YES;
-
-    // Presenting view controllers from within action sheet delegate does not work on iPad running iOS 8 GM seed, without delay
-    dispatch_async(dispatch_get_main_queue(), ^{
-      block();
-    });
-  }
+	if (block) block();
 }
 
 - (void)willPresentActionSheet:(UIActionSheet *)actionSheet
@@ -116,10 +103,7 @@
 }
 
 - (id)bk_initWithTitle:(NSString *)title {
-	self = [self initWithTitle:title delegate:self.bk_dynamicDelegate cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
-	if (!self) { return nil; }
-	self.delegate = self.bk_dynamicDelegate;
-	return self;
+	return [self initWithTitle:title delegate:self.bk_dynamicDelegate cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
 }
 
 #pragma mark Actions
@@ -154,13 +138,12 @@
 #pragma mark Properties
 
 - (void)bk_setHandler:(void (^)(void))block forButtonAtIndex:(NSInteger)index {
-	A2DynamicUIActionSheetDelegate *delegate = self.bk_ensuredDynamicDelegate;
-
-	if (block) {
-		delegate.handlers[@(index)] = [block copy];
-	} else {
-		[delegate.handlers removeObjectForKey:@(index)];
-	}
+	id key = @(index);
+	
+	if (block)
+		[self.bk_dynamicDelegate handlers][key] = [block copy];
+	else
+		[[self.bk_dynamicDelegate handlers] removeObjectForKey:key];
 }
 
 - (void (^)(void))bk_handlerForButtonAtIndex:(NSInteger)index

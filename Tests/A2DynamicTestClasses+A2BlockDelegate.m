@@ -15,7 +15,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testReturnObjectBlock": @"testReturnObject" }];
 	}
 }
@@ -30,7 +29,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testReturnStructBlock": @"testReturnStruct" }];
 	}
 }
@@ -45,7 +43,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithObjectBlock": @"testWithObject:" }];
 	}
 }
@@ -60,7 +57,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithCharBlock": @"testWithChar:" }];
 	}
 }
@@ -75,7 +71,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithUCharBlock": @"testWithUChar:" }];
 	}
 }
@@ -90,7 +85,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithShortBlock": @"testWithShort:" }];
 	}
 }
@@ -105,7 +99,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithUShortBlock": @"testWithUShort:" }];
 	}
 }
@@ -120,7 +113,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithIntBlock": @"testWithInt:" }];
 	}
 }
@@ -135,7 +127,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithUIntBlock": @"testWithUInt:" }];
 	}
 }
@@ -150,7 +141,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithLongBlock": @"testWithLong:" }];
 	}
 }
@@ -165,7 +155,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithULongBlock": @"testWithULong:" }];
 	}
 }
@@ -180,7 +169,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithLongLongBlock": @"testWithLongLong:" }];
 	}
 }
@@ -195,7 +183,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithULongLongBlock": @"testWithULongLong:" }];
 	}
 }
@@ -210,7 +197,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithFloatBlock": @"testWithFloat:" }];
 	}
 }
@@ -225,7 +211,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithDoubleBlock": @"testWithDouble:" }];
 	}
 }
@@ -240,7 +225,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithArrayBlock": @"testWithArray:" }];
 	}
 }
@@ -255,7 +239,6 @@
 
 + (void)load {
 	@autoreleasepool {
-		[self bk_registerDynamicDelegate];
 		[self bk_linkDelegateMethods:@{ @"testWithStructBlock": @"testPassStruct:" }];
 	}
 }

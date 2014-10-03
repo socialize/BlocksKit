@@ -3,8 +3,7 @@
 //
 //  The Objective-C block utilities you always wish you had.
 //
-//  Copyright (c) 2011-2012, 2013-2014 Zachary Waldowski
-//  Copyright (c) 2012-2013 Pandamonia LLC
+//  Copyright (c) 2011-2013 Pandamonia LLC.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -25,14 +24,13 @@
 //  THE SOFTWARE.
 //
 
-#import <BlocksKit/UIActionSheet+BlocksKit.h>
-#import <BlocksKit/UIAlertView+BlocksKit.h>
-#import <BlocksKit/UIBarButtonItem+BlocksKit.h>
-#import <BlocksKit/UIControl+BlocksKit.h>
-#import <BlocksKit/UIGestureRecognizer+BlocksKit.h>
-#import <BlocksKit/UIPopoverController+BlocksKit.h>
-#import <BlocksKit/UITextField+BlocksKit.h>
-#import <BlocksKit/UIView+BlocksKit.h>
-#import <BlocksKit/UIWebView+BlocksKit.h>
-#import <BlocksKit/UITextField+BlocksKit.h>
-#import <BlocksKit/UIImagePickerController+BlocksKit.h>
+#import "UIActionSheet+BlocksKit.h"
+#import "UIAlertView+BlocksKit.h"
+#import "UIBarButtonItem+BlocksKit.h"
+#import "UIControl+BlocksKit.h"
+#import "UIGestureRecognizer+BlocksKit.h"
+#import "UIPopoverController+BlocksKit.h"
+#import "UITextField+BlocksKit.h"
+#import "UIView+BlocksKit.h"
+#import "UIWebView+BlocksKit.h"
+#import "UITextField+BlocksKit.h"

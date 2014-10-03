@@ -7,96 +7,70 @@
 
 #import <XCTest/XCTest.h>
 #import <BlocksKit/NSTimer+BlocksKit.h>
-#import "XCTestCase+BKAsyncTestCase.h"
+#import "BKAsyncTestCase.h"
 
-static const NSTimeInterval BKTimerTestInterval = 0.025;
-static const NSTimeInterval BKTimerTestTimeout = 1.0;
-static const NSInteger BKTimerTestMinimum = ((NSInteger)(BKTimerTestTimeout / BKTimerTestInterval) - 2);
-
-@interface NSTimerBlocksKitTest : XCTestCase
+@interface NSTimerBlocksKitTest : BKAsyncTestCase
 
 @end
 
-@implementation NSTimerBlocksKitTest
-
-- (void)testScheduledTimer {
-	__block NSInteger total = 0;
-	
-	void(^timerBlock)(NSTimer *) = ^(NSTimer *timer) {
-		total++;
-		[self bk_finishRunningAsyncTest];
-	};
-	
-	[self bk_performAsyncTestWithTimeout:BKTimerTestTimeout block:^{
-		NSTimer *timer = [NSTimer bk_scheduledTimerWithTimeInterval:BKTimerTestInterval block:timerBlock repeats:NO];
-		if (!timer) {
-			[self bk_finishRunningAsyncTest];
-			XCTFail(@"timer is nil");
-		}
-	}];
-	
-	XCTAssertEqual(total, 1, @"total is %ld", (long)total);
+@implementation NSTimerBlocksKitTest {
+	NSInteger _total;
 }
 
-- (void)testRepeatedScheduledTimer {
-	__block NSInteger total = 0;
-	
+- (void)setUp {
+	_total = 0;
+}
+
+- (void)testScheduledTimer {
 	void(^timerBlock)(NSTimer *) = ^(NSTimer *timer) {
-		total++;
-		if (total >= BKTimerTestMinimum) {
-			[self bk_finishRunningAsyncTest];
-			[timer invalidate];
-		}
+		_total++;
+		NSLog(@"total is %lu", (unsigned long)_total);
 	};
-	
-	[self bk_performAsyncTestWithTimeout:BKTimerTestTimeout block:^{
-		NSTimer *timer = [NSTimer bk_scheduledTimerWithTimeInterval:BKTimerTestInterval block:timerBlock repeats:YES];
-		if (!timer) {
-			[self bk_finishRunningAsyncTest];
-			XCTFail(@"timer is nil");
-		}
-	}];
+	[self prepare];
+	NSTimer *timer = [NSTimer bk_scheduledTimerWithTimeInterval:0.1 block:timerBlock repeats:NO];
+	XCTAssertNotNil(timer,@"timer is nil");
+	[self waitForTimeout:1];
+	XCTAssertEqual(_total, (NSInteger)1, @"total is %ld", (long)_total);
+}
+
+- (void)testRepeatedlyScheduledTimer {
+	void(^timerBlock)(NSTimer *) = ^(NSTimer *timer) {
+		_total++;
+		NSLog(@"total is %lu", (unsigned long)_total);
+	};
+	[self prepare];
+	NSTimer *timer = [NSTimer bk_scheduledTimerWithTimeInterval:0.1 block:timerBlock repeats:YES];
+	XCTAssertNotNil(timer,@"timer is nil");
+	[self waitForTimeout:1];
+	[timer invalidate];
+	XCTAssertTrue(_total > 3, @"total is %ld", (long)_total);
 }
 
 - (void)testUnscheduledTimer {
-	__block NSInteger total = 0;
-
 	void(^timerBlock)(NSTimer *) = ^(NSTimer *timer) {
-		total++;
-		[self bk_finishRunningAsyncTest];
+		_total++;
+		NSLog(@"total is %lu", (unsigned long)_total);
 	};
-	
-	[self bk_performAsyncTestWithTimeout:BKTimerTestTimeout block:^{
-		NSTimer *timer = [NSTimer bk_scheduledTimerWithTimeInterval:BKTimerTestInterval block:timerBlock repeats:NO];
-		if (!timer) {
-			[self bk_finishRunningAsyncTest];
-			XCTFail(@"timer is nil");
-		}
-		[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
-	}];
-	
-	XCTAssertEqual(total, 1, @"total is %ld", (long)total);
+	[self prepare];
+	NSTimer *timer = [NSTimer bk_timerWithTimeInterval:0.1 block:timerBlock repeats:NO];
+	XCTAssertNotNil(timer,@"timer is nil");
+	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+	[self waitForTimeout:1];
+	XCTAssertEqual(_total, (NSInteger)1, @"total is %ld", (long)_total);
 }
 
-- (void)testRepeatedUnscheduledTimer {
-	__block NSInteger total = 0;
-	
+- (void)testRepeatableUnscheduledTimer {
 	void(^timerBlock)(NSTimer *) = ^(NSTimer *timer) {
-		total++;
-		if (total >= BKTimerTestMinimum) {
-			[self bk_finishRunningAsyncTest];
-			[timer invalidate];
-		}
+		_total += 1;
+		NSLog(@"total is %lu", (unsigned long)_total);
 	};
-	
-	[self bk_performAsyncTestWithTimeout:BKTimerTestTimeout block:^{
-		NSTimer *timer = [NSTimer bk_timerWithTimeInterval:BKTimerTestInterval block:timerBlock repeats:YES];
-		if (!timer) {
-			[self bk_finishRunningAsyncTest];
-			XCTFail(@"timer is nil");
-		}
-		[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
-	}];
+	[self prepare];
+	NSTimer *timer = [NSTimer bk_timerWithTimeInterval:0.1 block:timerBlock repeats:YES];
+	XCTAssertNotNil(timer,@"timer is nil");
+	[[NSRunLoop currentRunLoop] addTimer:timer forMode:NSDefaultRunLoopMode];
+	[self waitForTimeout:1];
+	[timer invalidate];
+	XCTAssertTrue(_total > 3, @"total is %ld", (long)_total);
 }
 
 @end
