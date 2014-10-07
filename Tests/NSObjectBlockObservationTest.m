@@ -6,7 +6,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <BlocksKit/NSObject+BKBlockObservation.h>
+#import "NSObject+BKBlockObservation.h"
 
 @interface NSObjectBlockObservationTest : XCTestCase
 

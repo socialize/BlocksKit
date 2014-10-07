@@ -6,8 +6,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <BlocksKit/BlocksKit.h>
-#import <BlocksKit/A2DynamicDelegate.h>
+#import "BlocksKit.h"
+#import "A2DynamicDelegate.h"
 #import <objc/runtime.h>
 
 @interface 					 BKApp : NSObject

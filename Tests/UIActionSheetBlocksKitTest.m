@@ -6,8 +6,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <BlocksKit/UIActionSheet+BlocksKit.h>
-#import <BlocksKit/A2DynamicDelegate.h>
+#import "UIActionSheet+BlocksKit.h"
+#import "A2DynamicDelegate.h"
 
 @interface UIActionSheetBlocksKitTest : XCTestCase
 

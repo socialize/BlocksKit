@@ -5,8 +5,8 @@
 
 #import <XCTest/XCTest.h>
 #import <MessageUI/MessageUI.h>
-#import <BlocksKit/A2DynamicDelegate.h>
-#import <BlocksKit/BlocksKit+MessageUI.H>
+#import "A2DynamicDelegate.h"
+#import "BlocksKit+MessageUI.h"
 
 @interface MFMessageComposeViewControllerBlocksKitTest : XCTestCase <MFMessageComposeViewControllerDelegate>
 

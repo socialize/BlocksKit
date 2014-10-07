@@ -6,7 +6,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <BlocksKit/NSArray+BlocksKit.h>
+#import "NSArray+BlocksKit.h"
 
 @interface NSArrayBlocksKitTest : XCTestCase
 

@@ -4,7 +4,7 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <BlocksKit/NSURLConnection+BlocksKit.h>
+#import "NSURLConnection+BlocksKit.h"
 #import "XCTestCase+BKAsyncTestCase.h"
 
 @interface NSURLConnectionBlocksKitTest : XCTestCase

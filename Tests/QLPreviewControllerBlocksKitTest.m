@@ -4,8 +4,8 @@
 //
 
 #import <XCTest/XCTest.h>
-#import <BlocksKit/QLPreviewController+BlocksKit.h>
-#import <BlocksKit/A2DynamicDelegate.h>
+#import "QLPreviewController+BlocksKit.h"
+#import "A2DynamicDelegate.h"
 
 @interface QLPreviewControllerBlocksKitTest : XCTestCase
 
